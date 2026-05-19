@@ -98,17 +98,68 @@
             <h2 class="text-3xl font-bold mb-8 leading-tight">Selamat & Semangat <br> Mengerjakan Try Out Kamu!</h2>
 
             <div class="flex flex-col gap-4 max-w-xs mx-auto">
-                <a href="{{ route('starts') }}"
+                <button id="openReminder"
                     class="bg-white text-[#FF7A47] font-bold py-3 px-8 rounded-xl shadow-lg hover:scale-105 transition active:scale-95">
                     Mulai Mengerjakan!
-                </a>
+                </button>
                 <button
                     class="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:scale-105 transition active:scale-95">
                     Kembali
                 </button>
             </div>
         </div>
+        <!-- REMINDER OVERLAY -->
+        <div id="reminderOverlay"
+            class="fixed inset-0 bg-black/50 z-[70] hidden opacity-0 transition-opacity duration-300">
 
+            <!-- MODAL -->
+            <div
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl shadow-2xl w-[92%] sm:w-[500px] p-8 text-center">
+
+                <!-- TITLE -->
+                <h2 class="text-2xl font-bold text-[#FF7A47] mb-6">
+                    Reminder
+                </h2>
+
+                <!-- ICON -->
+                <div class="flex justify-center mb-6">
+
+                    <div
+                        class="w-24 h-24 rounded-full bg-[#FF7A47] flex items-center justify-center shadow-lg">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 9v2m0 4h.01M12 3a9 9 0 100 18 9 9 0 000-18z" />
+
+                        </svg>
+
+                    </div>
+
+                </div>
+
+                <!-- TEXT -->
+                <p class="text-gray-600 leading-relaxed mb-8 text-sm sm:text-base">
+                    Pastikan tidak ada aktivitas login dari perangkat lain
+                    saat try out akan dilakukan.
+                </p>
+
+                <!-- BUTTON -->
+                <div class="flex flex-col gap-3">
+
+                    <a href="{{ route('starts') }}"
+                        class="bg-[#FF7A47] hover:bg-[#f06b38] text-white font-semibold py-3 rounded-xl shadow-lg transition">
+                        Mulai Mengerjakan
+                    </a>
+
+                    <button id="closeReminder"
+                        class="border border-gray-300 text-gray-600 py-3 rounded-xl hover:bg-gray-100 transition">
+                        Batal
+                    </button>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 

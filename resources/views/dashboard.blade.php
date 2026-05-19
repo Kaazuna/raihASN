@@ -18,116 +18,221 @@
     <div id="overlay" class="fixed inset-0 bg-black/40 z-40 hidden opacity-0 transition-opacity duration-300">
     </div>
 
-    {{-- Main --}}
-    <div class="max-w-6xl mx-auto p-6 mt-4 pt-20">
+    {{-- MAIN --}}
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10">
 
-        <!-- Welcome -->
-        <h2 class=" text-2xl font-bold mb-6">Selamat Datang Kembali</h2>
-        <h1 class="text-5xl font-bold mb-6">Mustafa</h1>
+        <!-- WELCOME -->
+        <div class="mb-6 text-center lg:text-left">
 
-        <!-- Banner -->
-        <div class="swiper rounded-xl overflow-hidden mb-6">
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-700">
+                Selamat Datang Kembali
+            </h2>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">
+                Mustafa
+            </h1>
+
+        </div>
+
+        <!-- BANNER -->
+        <div class="swiper rounded-2xl overflow-hidden mb-8 shadow-lg">
 
             <div class="swiper-wrapper">
 
-                <!-- Slide -->
+                <!-- SLIDE -->
                 <div class="swiper-slide">
-                    <div class="relative w-full aspect-[16/4]">
+                    <div class="relative w-full h-[180px] sm:h-[260px] md:h-[320px] lg:h-[380px]">
+
                         <img src="https://picsum.photos/1200/500?1" class="w-full h-full object-cover">
+
                     </div>
                 </div>
 
-                <!-- Slide -->
+                <!-- SLIDE -->
                 <div class="swiper-slide">
-                    <div class="w-full aspect-[16/4]">
+                    <div class="relative w-full h-[180px] sm:h-[260px] md:h-[320px] lg:h-[380px]">
+
                         <img src="https://picsum.photos/1200/500?2" class="w-full h-full object-cover">
+
                     </div>
                 </div>
 
-                <!-- Slide -->
+                <!-- SLIDE -->
                 <div class="swiper-slide">
-                    <div class="w-full aspect-[16/4]">
+                    <div class="relative w-full h-[180px] sm:h-[260px] md:h-[320px] lg:h-[380px]">
+
                         <img src="https://picsum.photos/1200/500?3" class="w-full h-full object-cover">
+
                     </div>
                 </div>
 
             </div>
 
             <div class="swiper-pagination"></div>
+
         </div>
 
+        <!-- MENU -->
+        <div class="flex justify-center mb-10">
 
-        <!-- Menu -->
-        <div
-            class="bg-[#FF7A47] rounded-xl shadow-lg p-8 grid grid-cols-4 text-center text-white mb-8 max-w-5xl mx-auto">
-            <div>
-                <a href="{{ route('tryout') }}">
-                    <div class="flex justify-center mb-4">
-                        <img src="{{ asset('images/BookPencil.png') }}" alt="Bookpencil" class="w-12">
+            <div
+                class="bg-[#FF7A47] rounded-3xl shadow-xl px-3 sm:px-6 py-4 sm:py-6 grid grid-cols-3 gap-2 sm:gap-6 w-full max-w-3xl text-white">
+
+                <!-- ITEM -->
+                <a href="{{ route('tryout') }}"
+                    class="flex flex-col items-center justify-center hover:scale-105 transition">
+
+                    <div class="flex justify-center mb-3">
+
+                        <img src="{{ asset('images/BookPencil.png') }}" alt="Bookpencil" class="w-7 sm:w-10">
+
                     </div>
-                    <p>Try Out</p>
+
+                    <p class="text-sm sm:text-base font-medium text-center">
+                        Try Out
+                    </p>
+
                 </a>
-            </div>
-            <div>
-                <div class="flex justify-center mb-4">
-                    <img src="{{ asset('images/Time.png') }}" alt="Time" class="w-12">
-                </div>
-                <p>Riwayat</p>
-            </div>
-            <div>
-                <div class="flex justify-center mb-4">
-                    <img src="{{ asset('images/Rules.png') }}" alt="Rules" class="w-12">
-                </div>
-                <p>Review</p>
-            </div>
-            <div>
-                <div class="flex justify-center mb-4">
-                    <img src="{{ asset('images/Reading.png') }}" alt="Reading" class="w-12">
-                </div>
-                <p>Materi</p>
-            </div>
-        </div>
 
-        <!-- Leaderboard -->
-        <h2 class="text-center text-xl font-semibold mb-4 mt-15">Leaderboard</h2>
+                <!-- ITEM -->
+                <div class="flex flex-col items-center justify-center hover:scale-105 transition cursor-pointer">
 
-        <!-- Filter Tabs -->
-        <div class="flex justify-center gap-3 mb-4">
-            <button class="bg-[#FF7A47] text-white px-4 py-1 rounded-full">Harian</button>
-            <button class="border border-[#FF7A47] text-[#FF7A47] px-4 py-1 rounded-full">Mingguan</button>
-            <button class="border border-[#FF7A47] text-[#FF7A47] px-4 py-1 rounded-full">Bulanan</button>
-        </div>
+                    <div class="flex justify-center mb-3">
 
-        <!-- List -->
-        <div class="space-y-3 mb-12 max-w-6xl mx-auto">
+                        <img src="{{ asset('images/Time.png') }}" alt="Time" class="w-7 sm:w-10">
 
-            <!-- Item -->
-            <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
-                <div class="flex items-center gap-4">
-                    <span class="font-bold">1</span>
-                    <div>
-                        <p class="font-semibold">Nama User</p>
-                        <p class="text-sm text-gray-500">Alamat - Detail User</p>
                     </div>
+
+                    <p class="text-sm sm:text-base font-medium text-center">
+                        Riwayat
+                    </p>
+
                 </div>
-                <button class="bg-[#FF7A47] text-white px-4 py-1 rounded-lg text-sm">
-                    Detail
-                </button>
+
+                <!-- ITEM -->
+                <div class="flex flex-col items-center justify-center hover:scale-105 transition cursor-pointer">
+
+                    <div class="flex justify-center mb-3">
+
+                        <img src="{{ asset('images/Rules.png') }}" alt="Rules" class="w-7 sm:w-10">
+
+                    </div>
+
+                    <p class="text-sm sm:text-base font-medium text-center">
+                        Materi
+                    </p>
+
+                </div>
+
             </div>
 
-            <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
-                <div class="flex items-center gap-4">
-                    <span class="font-bold">2</span>
-                    <div>
-                        <p class="font-semibold">Nama User</p>
-                        <p class="text-sm text-gray-500">Alamat - Detail User</p>
-                    </div>
-                </div>
-                <button class="bg-[#FF7A47] text-white px-4 py-1 rounded-lg text-sm">
-                    Detail
-                </button>
-            </div>
         </div>
+
+        <!-- LEADERBOARD -->
+        <div class="max-w-5xl mx-auto">
+
+            <h2 class="text-center text-2xl font-bold mb-5">
+                Leaderboard
+            </h2>
+
+            {{-- Filter --}}
+            <div class="flex flex-wrap justify-center gap-3 mb-6">
+
+                <button
+                    class="leaderboard-btn bg-[#FF7A47] text-white px-5 py-2 rounded-full text-sm sm:text-base hover:scale-105 transition cursor-pointer">
+                    Harian
+                </button>
+
+                <button
+                    class="leaderboard-btn border border-[#FF7A47] text-[#FF7A47] px-5 py-2 rounded-full text-sm sm:text-base hover:scale-105 transition cursor-pointer">
+                    Mingguan
+                </button>
+
+                <button
+                    class="leaderboard-btn border border-[#FF7A47] text-[#FF7A47] px-5 py-2 rounded-full text-sm sm:text-base hover:scale-105 transition cursor-pointer">
+                    Bulanan
+                </button>
+
+            </div>
+            <!-- LIST -->
+            <div class="space-y-4">
+
+                <!-- ITEM -->
+                <div
+                    class="bg-white rounded-2xl shadow-md p-4 sm:p-5
+                flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+                    <div class="flex items-center gap-4">
+
+                        <span class="font-bold text-lg sm:text-xl">
+                            1
+                        </span>
+
+                        <div>
+
+                            <p class="font-semibold text-sm sm:text-base">
+                                Nama User
+                            </p>
+
+                            <p class="text-xs sm:text-sm text-gray-500">
+                                Alamat - Detail User
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="bg-[#FF7A47] hover:bg-[#f06b38]
+                    text-white px-5 py-2 rounded-xl text-sm transition
+                    w-full sm:w-auto">
+
+                        Detail
+
+                    </button>
+
+                </div>
+
+                <!-- ITEM -->
+                <div
+                    class="bg-white rounded-2xl shadow-md p-4 sm:p-5
+                flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+                    <div class="flex items-center gap-4">
+
+                        <span class="font-bold text-lg sm:text-xl">
+                            2
+                        </span>
+
+                        <div>
+
+                            <p class="font-semibold text-sm sm:text-base">
+                                Nama User
+                            </p>
+
+                            <p class="text-xs sm:text-sm text-gray-500">
+                                Alamat - Detail User
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="bg-[#FF7A47] hover:bg-[#f06b38]
+                    text-white px-5 py-2 rounded-xl text-sm transition
+                    w-full sm:w-auto">
+
+                        Detail
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
     @include('components.footer')
 </body>
