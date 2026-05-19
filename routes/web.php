@@ -23,3 +23,18 @@ Route::get('/loginASN', function () {
 Route::get('/signupASN', function () {
     return view('auth.signupASN');
 })->name('signup');
+Route::get('/admin/tryout', function () {
+    return view('admin.magtryout');
+})->name('admintryout');
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboardadmin');
+})->name('dashadmin');
+Route::get('/admin/banksoal', function () {
+    return view('admin.manajemensoal');
+})->name('manajemensoal');
+Route::get('/admin/usermanajemen', function () {
+    return view('admin.manuser');
+})->name('manajemenuser');
+Route::get('/admin/tryout/create', function () {
+    return view('admin.tambahsoal');
+});

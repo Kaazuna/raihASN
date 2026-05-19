@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-[#FFF5F0] antialiased text-gray-800" style="font-family: 'Poppins', sans-serif; scroll-smooth">
+<body class="bg-[#FFF9F5] antialiased text-gray-800" style="font-family: 'Poppins', sans-serif; scroll-smooth">
 
     <!-- NAVBAR -->
     <nav id="navbar"
@@ -29,30 +29,50 @@
             </div>
 
             <!-- MENU -->
-            <div class="hidden md:flex gap-6 items-center text-lg">
+            <div class="flex items-center gap-3 sm:gap-5 md:gap-6">
 
-                <a href="#" class="hover:text-orange-300 transition">
+                <a href="#" class="text-xs sm:text-sm md:text-lg
+        hover:text-orange-300 transition">
+
                     Paket
+
                 </a>
 
-                <a href="#" class="hover:text-orange-300 transition">
+                <a href="#testimoni" class="text-xs sm:text-sm md:text-lg
+        hover:text-orange-300 transition">
+
                     Testimoni
+
                 </a>
 
-                <a href="#" class="hover:text-orange-300 transition">
+                <a href="#blog" class="text-xs sm:text-sm md:text-lg
+        hover:text-orange-300 transition">
+
                     Blog
+
                 </a>
 
-                <a href="#" class="hover:text-orange-300 transition">
+                <a href="#about"
+                    class="hidden sm:block text-sm md:text-lg
+        hover:text-orange-300 transition whitespace-nowrap">
+
                     Tentang Kami
+
                 </a>
 
-                <!-- BUTTON -->
+                <!-- LOGIN -->
                 <a href="{{ route('login') }}"
-                    class="inline-block bg-blue-500 px-4 py-2 rounded-xl text-white
-                       transition duration-300
-                       hover:bg-blue-600 hover:shadow-lg hover:scale-105 active:scale-95">
-                    Log in
+                    class="bg-blue-500
+        px-3 sm:px-4
+        py-2
+        rounded-xl
+        text-xs sm:text-sm md:text-base
+        text-white
+        hover:bg-blue-600
+        transition">
+
+                    Login
+
                 </a>
 
             </div>
@@ -87,7 +107,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 items-center gap-10">
+    <section id="about" class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 items-center gap-10">
 
         <!-- IMAGE -->
         <div class="flex justify-center relative">
@@ -119,7 +139,7 @@
     </section>
 
     <!-- FITUR -->
-    <section class="relative py-20 px-6 bg-[#FFF5F0]">
+    <section class="relative py-20 px-6 bg-[#FFF9F5]">
         <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
 
             <!-- CARD 1 -->
@@ -164,11 +184,11 @@
     </section>
 
     <!-- TESTIMONI -->
-    <section class="py-20 px-6 bg-[#FFF5F0]">
+    <section id="testimoni" class="py-20 px-6 bg-[#FF7A47]">
 
         <div class="max-w-6xl mx-auto text-center mb-10">
-            <h2 class="text-3xl font-bold mb-2">Apa Kata Mereka?</h2>
-            <p class="text-gray-500">Banyak yang sudah berhasil, ini kata mereka</p>
+            <h2 class="text-5xl font-bold mb-2 text-white">Apa Kata Mereka?</h2>
+            <p class="text-white">Banyak yang sudah berhasil, ini kata mereka</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -270,62 +290,12 @@
         </div>
 
     </section>
-    <!-- PAKET BELAJAR -->
 
-    <section class="rounded-2xl p-8 mb-12 max-w-4xl mx-auto">
+
+    <!-- Blog -->
+    <section id="blog" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="max-w-6xl mx-auto text-center mb-10">
-            <h2 class="text-3xl font-bold mb-2">Paket</h2>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-10 max-w-3xl mx-auto">
-
-            <!-- Guest -->
-            <div class="bg-[#FF7A47] rounded-xl p-3 shadow-md bg-gradient-to-b from-[#FF7A47] to-[#FF8B60]">
-                <div class="bg-white rounded-lg p-4">
-                    <h3>Gratis</h3>
-                    <p class="text-3xl font-bold">Rp 0</p>
-                    <button class="mt-3 bg-[#FF7A47] text-white text-xs px-5 py-1 rounded-full">
-                        Coba Sekarang
-                    </button>
-                </div>
-
-                <ul class="text-white mt-4 text-sm space-y-1 list-disc list-inside">
-                    <li>a</li>
-                    <li>b</li>
-                    <li>c</li>
-                    <li>d</li>
-                    <li>e</li>
-                    <li>f</li>
-                </ul>
-            </div>
-
-            <!-- Premium -->
-            <div class="bg-[#FF7A47] rounded-xl p-3 shadow-md bg-gradient-to-b from-[#FF7A47] to-[#FF8B60]">
-                <div class="bg-white rounded-lg p-4">
-                    <h3>Premium</h3>
-                    <p class="text-3xl font-bold">Rp 90.000</p>
-                    <button class="mt-3 bg-[#FF7A47] text-white text-xs px-5 py-1 rounded-full">
-                        Coba Sekarang
-                    </button>
-                </div>
-
-                <ul class="text-white mt-4 text-sm space-y-1 list-disc list-inside">
-                    <li>a</li>
-                    <li>b</li>
-                    <li>c</li>
-                    <li>d</li>
-                    <li>e</li>
-                    <li>f</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ARTIKEL -->
-    <section class="mb-1 max-w-4xl mx-auto">
-        <div class="max-w-6xl mx-auto text-center mb-10">
-            <h2 class="text-3xl font-bold mb-2">Artikel</h2>
+            <h2 class="text-5xl font-bold mb-2">Blog</h2>
         </div>
 
         <div class="space-y-4 max-h-[510px] overflow-y-auto pr-2 pb-4">
@@ -334,8 +304,8 @@
                     <div class="w-20 h-20 bg-gray-200 rounded-md"></div>
                     <div>
                         <p class="text-xs text-gray-500">Tanggal</p>
-                        <h3 class="font-semibold">Judul Artikel</h3>
-                        <p class="text-sm text-gray-600">Isi Artikel</p>
+                        <h3 class="font-semibold">Judul Blog</h3>
+                        <p class="text-sm text-gray-600">Isi Blog</p>
                     </div>
                 </div>
             @endfor
@@ -343,10 +313,10 @@
     </section>
 
     <!-- CTA SECTION -->
-    <section class="bg-[#FFF5F0] py-16 px-6">
+    <section class="bg-[#FFF9F5] py-16 px-6">
         <div
             class="max-w-5xl mx-auto bg-gradient-to-b from-[#FF7A47] to-[#FFB199] text-white rounded-3xl text-center py-12 px-6 shadow-lg">
-            <h2 class="text-xl md:text-2xl font-semibold mb-6">
+            <h2 class="text-2xl md:text-4xl font-bold mb-6 leading-relaxed">
                 Mulai hari ini, <BR>selangkah lebih dekat jadi ASN</BR>
             </h2>
 
